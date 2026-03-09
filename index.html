@@ -1,509 +1,170 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>✨ ‘إنجاز كلين </title>
-  <!-- Font Awesome 6 (free) & Google Fonts (Cairo للأحرف العربية) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>✨ ‘إنجاز كلين </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./spray-can-sparkles-solid (1).png">
 
-    body {
-      font-family: 'Cairo', 'Tahoma', sans-serif;
-      background: #f6fafd;  /* الخلفية الموحدة الفاتحة كما في التصميم الأول */
-      color: #1e2b37;
-      line-height: 1.5;
-      background-image: url(./furn_image.jpg);
-      background-size: cover;
-      background-position: center;
-    }
+    <!-- Font Awesome 6 (free) & Google Fonts (Cairo للأحرف العربية) -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
 
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem 1.2rem 2rem;
-      background: transparent; /* شفاف ليظهر لون الخلفية من body */
-    }
+  </head>
+  <body>
+    <div class="page">
 
-    /* شريط العرض الخاص */
-    .offer-badge {
-      display: inline-block;
-      background: #0b3b3c;
-      color: #f0fdf8;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 0.6rem 1.5rem;
-      border-radius: 50px;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.3px;
-      box-shadow: 0 6px 14px rgba(0,40,30,0.08);
-    }
-
-    .offer-badge i {
-      margin-left: 6px; /* rtl */
-      color: #f4c542;
-    }
-
-    /* القسم الرئيسي */
-    .hero {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      line-height: 1.3;
-      background: linear-gradient(145deg, #0f5257, #1e7e6c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      color: #2f4b5c;
-      max-width: 700px;
-      margin: 0 auto 1.8rem;
-      background: rgba(255,255,255,0.7);
-      padding: 0.8rem 1.5rem;
-      border-radius: 60px;
-      font-weight: 500;
-      box-shadow: 0 4px 10px rgba(0,30,20,0.05);
-    }
-
-    /* الأزرار الرئيسية */
-    .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      justify-content: center;
-      margin: 2rem 0 2.2rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.7rem;
-      padding: 1.1rem 2.5rem;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 20px -8px rgba(0,40,30,0.2);
-      min-width: 240px;
-    }
-
-    .btn i {
-      font-size: 1.9rem;
-    }
-
-    .btn-wa {
-      background: #25D366;
-      color: white;
-    }
-    .btn-wa:hover {
-      background: #20b859;
-      transform: scale(1.02);
-    }
-
-    .btn-call {
-      background: #1f4e8c;
-      color: white;
-    }
-    .btn-call:hover {
-      background: #0f3d6b;
-      transform: scale(1.02);
-    }
-      .btn-call-i {
-      color: #1f4e8c;
-      background: white;
-      border: 2px solid #1f4e8c;
-    }
-    .btn-call-i:hover {
-      background: #f0f0f0;
-      transform: scale(1.02);
-    }
-
-    /* شارات الثقة */
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0 2.5rem;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #1b4b4a;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 40px;
-      box-shadow: 0 6px 14px rgba(0,30,20,0.05);
-    }
-
-    .trust-item i {
-      color: #0f7b6e;
-      font-size: 1.4rem;
-    }
-
-    /* عناوين الخدمات */
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin: 2.2rem 0 1.8rem;
-      text-align: center;
-      color: #12403c;
-      position: relative;
-    }
-    .section-title:after {
-      content: '';
-      display: block;
-      width: 100px;
-      height: 4px;
-      background: #30b5a0;
-      margin: 0.7rem auto 0;
-      border-radius: 4px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0 3rem;
-    }
-
-    .service-card {
-      background: white;
-      padding: 2rem 1rem;
-      border-radius: 40px;
-      text-align: center;
-      box-shadow: 0 18px 30px -12px rgba(0,60,50,0.12);
-      transition: 0.15s;
-      border: 1px solid #e0f0eb;
-    }
-
-    .service-card i {
-      font-size: 3rem;
-      color: #178277;
-      margin-bottom: 1rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.7rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-    }
-
-    .service-card p {
-      color: #3d5a68;
-      font-size: 1rem;
-    }
-
-    /* قسم تكرار التواصل (بنفس تدرج التصميم الأول) */
-    .contact-repeat {
-      background: linear-gradient(115deg, #e1f2ef, #ffffff);
-      padding: 2.5rem 2rem;
-      border-radius: 80px 80px 80px 80px;
-      margin: 3rem 0 2rem;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.6);
-    }
-
-    .contact-repeat h2 {
-      font-size: 2.2rem;
-      color: #083d3a;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .contact-repeat .btns-small {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 2rem 0 1.5rem;
-    }
-
-    .btn-small {
-      padding: 1rem 2.2rem;
-      font-size: 1.4rem;
-      min-width: 200px;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #1d7a6e;
-      color: #1d7a6e;
-      box-shadow: none;
-      font-size: 1.3rem;
-    }
-    .btn-outline i {
-      color: #1d7a6e;
-    }
-    .btn-outline:hover {
-      background: #1d7a6e;
-      color: white;
-    }
-    .btn-outline:hover i {
-      color: white;
-    }
-
-    /* تذييل */
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      color: #3b6763;
-      border-top: 2px dashed #b9dfd7;
-      padding-top: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .footer a {
-      color: #106456;
-      text-decoration: none;
-      font-weight: 600;
-      border-bottom: 1px dotted;
-    }
-
-    .footer .phone-footer {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin: 0.7rem 0;
-    }
-
-    /* استجابة للشاشات الصغيرة */
-    @media (max-width: 550px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .btn {
-        width: 100%;
-        min-width: unset;
-        font-size: 1.3rem;
-      }
-      .trust-row {
-        gap: 1rem;
-      }
-      .contact-repeat {
-        padding: 1.8rem 1rem;
-      }
-      .btn-small {
-        width: 100%;
-      }
-      .page {
-        padding: 1rem 0.8rem;
-      }
-    }
-
-    /* أيقونة رئيسية */
-    .hero-icon {
-      font-size: 4rem;
-      color: #1f8a7a;
-      margin-bottom: 0.5rem;
-      filter: drop-shadow(0 8px 12px #9ed9cd);
-    }
-
-    /* رسالة النقر */
-    .click-log {
-      opacity: 0.7;
-      font-size: 0.95rem;
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-
-    <!-- شارة عرض تيك توك -->
-    <div class="offer-badge">
-      <i class="fa-solid fa-tag"></i> عرض خاص من تيك توك: 20% خصم على أول حجز + تعقيم مجاني
-    </div>
-
-    <!-- الجزء العلوي مع أيقونة -->
-    <div class="hero">
-      <div class="hero-icon">
-        <i class="fa-solid fa-spray-can-sparkles"></i>
+      <!-- شارة عرض تيك توك -->
+      <div class="offer-badge">
+        <i class="fa-solid fa-tag"></i> عرض خاص من تيك توك: 20% خصم على أول حجز
+        + تعقيم مجاني
       </div>
-      <h1>إنجاز كلين<br> احجز في ٣٠ ثانية</h1>
-      <p><i class="fa-regular fa-clock" style="margin-left: 6px;"></i> خدمة نفس اليوم • مواد صديقة للبيئة • تأمين شامل</p>
-    </div>
 
-    <!-- الأزرار الرئيسية (واتساب و اتصال) -->
-    <div class="cta-buttons">
-      <div style="display:block; width: 100%; text-align: center;">
+      <!-- الجزء العلوي مع أيقونة -->
+      <div class="hero">
+        <div class="hero-icon">
+          <i class="fa-solid fa-spray-can-sparkles"></i>
+        </div>
+        <h1>إنجاز كلين<br> احجز في ٣٠ ثانية</h1>
+        <p><i class="fa-regular fa-clock" style="margin-left: 6px;"></i> خدمة
+          نفس اليوم • مواد صديقة للبيئة • تأمين شامل</p>
+      </div>
 
-        <a href="https://wa.me/1234567890?text=مرحباً%20إنجاز%20كلين!%20أنا%20مهتم%20بخدمات%20التنظيف%20،%20كم%20التكلفة؟" 
-        class="btn btn-wa" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        id="whatsappBtn">
-        <i class="fa-brands fa-whatsapp"></i> واتساب
-      </a>
-    </div>
+      <!-- الأزرار الرئيسية (واتساب و اتصال) -->
+      <div class="cta-buttons">
+        <div style="display:block; width: 100%; text-align: center;">
 
-      <div style="display: flex;flex-wrap: wrap; gap: 1.3rem;">
-        <a href="tel:+1234567890" class="btn btn-call" id="callBtn">
-          <i class="fa-solid fa-phone"></i> اتصل الآن
-        </a>
-        <a href="tel:+1234567890" class="btn btn-call-i" id="callBtn">
-          <i class="fa-solid fa-phone"></i> اتصل الآن
-        </a>
+          <a
+            href="https://wa.me/966580904198?text=مرحباً%20إنجاز%20كلين!%20أنا%20مهتم%20بخدمات%20التنظيف%20،%20كم%20التكلفة؟"
+            class="btn btn-wa"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="whatsappBtn">
+            <i class="fa-brands fa-whatsapp"></i> واتساب
+          </a>
+        </div>
+
+        <div style="display: flex;flex-wrap: wrap; gap: 1.3rem;">
+          <a href="tel:+966580904198" class="btn btn-call" id="callBtn">
+            <i class="fa-solid fa-phone"></i> اتصل الآن
+          </a>
+          <a href="tel:+966591721088" class="btn btn-call-i" id="callBtn">
+            <i class="fa-solid fa-phone"></i> اتصل الآن
+          </a>
+        </div>
+      </div>
+
+      <!-- شارات الثقة -->
+      <div class="trust-row">
+        <span class="trust-item"><i class="fa-regular fa-circle-check"></i> +٥٠٠
+          عملية تنظيف</span>
+        <span class="trust-item"><i class="fa-regular fa-star"></i> تقييم
+          ٤.٩</span>
+        <span class="trust-item"><i class="fa-regular fa-calendar"></i> حجز
+          فوري</span>
+      </div>
+
+      <!-- نظرة على الخدمات -->
+      <h2 class="section-title">خدمات التنظيف المتخصصة</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-house-chimney"></i>
+          <h3>منازل</h3>
+          <p>غرف نوم، مطابخ، حمامات — لمعان لا يُقاوم</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-building"></i>
+          <h3>مكاتب</h3>
+          <p>مساحات عمل تجارية، يومي أو أسبوعي</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-truck-moving"></i>
+          <h3>انتقالات</h3>
+          <p>تنظيف عميق قبل الانتقال أو بعده</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-fan"></i>
+          <h3>تعقيم شامل</h3>
+          <p>سجاد، ستائر، زوايا منسية</p>
+        </div>
+      </div>
+
+      <!-- قسم تواصل مكرر مع أزرار إضافية -->
+      <div class="contact-repeat">
+        <h2>📲 اضغط وتواصل فوراً</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 1.2rem;">نرد خلال ٣
+          دقائق</p>
+        <div class="btns-small">
+          <a
+            href="https://wa.me/+966580904198?text=مرحباً!%20شفت%20إعلانكم%20عالتيك%20توك%20وبغى%20احجز%20تنظيف"
+            class="btn btn-wa btn-small"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i> واتساب
+          </a>
+          <a href="tel:+966580904198" class="btn btn-call btn-small">
+            <i class="fa-solid fa-phone"></i> اتصال سريع
+          </a>
+        </div>
+        <div style="margin-top: 2rem;">
+          <a href="#" class="btn-outline btn-small" style="border-radius: 50px;"
+            id="copyTrigger">
+            <i class="fa-regular fa-copy"></i> اضغط لنسخ الرقم
+          </a>
+        </div>
+      </div>
+
+
+
+
+      <div class="hidden-message">
+        <div class="clipboard-toast" id="copyToast">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg>
+          <span>📎 تم نسخ الرقم الى الحافظة!</span>
+        </div>
+      </div>
+
+
+
+
+      <!-- التذييل مع رقم الهاتف والبريد -->
+      <div class="footer">
+        <div class="phone-footer">
+          <i class="fa-solid fa-phone-volume"></i> <a
+            href="tel:+966580904198">966-580-904-198+</a>
+        </div>
+        <div class="phone-footer">
+          <i class="fa-solid fa-phone-volume"></i> <a
+            href="tel:+966591721088">966-591-721-088+</a>
+        </div>
+        <!-- <div style="margin: 0.8rem 0;">
+          <i class="fa-regular fa-envelope"></i> <a
+            href="mailto:hello@ingazclean.pro">hello@ingazclean.pro</a>
+        </div> -->
+        <div
+          style="display: flex; gap: 1.8rem; justify-content: center; margin: 1.5rem 0;">
+          <span> <a href="https://www.tiktok.com/@ingazclean" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-tiktok"></i> @إنجاز كلين</a></span>
+          <!-- <span><i class="fa-brands fa-instagram"></i> ingaz_pro</span> -->
+        </div>
+        <div style="font-size: 1rem;">
+          © <span id="currentYear"></span> إنجاز كلين — ترخيص وتأمين
+        </div>
+        <div class="click-log" id="clickMessage"
+          style="margin-top: 1.2rem;"></div>
       </div>
     </div>
 
-    <!-- شارات الثقة -->
-    <div class="trust-row">
-      <span class="trust-item"><i class="fa-regular fa-circle-check"></i> +٥٠٠ عملية تنظيف</span>
-      <span class="trust-item"><i class="fa-regular fa-star"></i> تقييم ٤.٩</span>
-      <span class="trust-item"><i class="fa-regular fa-calendar"></i> حجز فوري</span>
-    </div>
+    <!-- جافاسكربت: السنة الحالية + تسجيل النقرات + نسخ الرقم -->
 
-    <!-- نظرة على الخدمات -->
-    <h2 class="section-title">خدمات التنظيف المتخصصة</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fa-solid fa-house-chimney"></i>
-        <h3>منازل</h3>
-        <p>غرف نوم، مطابخ، حمامات — لمعان لا يُقاوم</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-building"></i>
-        <h3>مكاتب</h3>
-        <p>مساحات عمل تجارية، يومي أو أسبوعي</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-truck-moving"></i>
-        <h3>انتقالات</h3>
-        <p>تنظيف عميق قبل الانتقال أو بعده</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-fan"></i>
-        <h3>تعقيم شامل</h3>
-        <p>سجاد، ستائر، زوايا منسية</p>
-      </div>
-    </div>
-
-    <!-- قسم تواصل مكرر مع أزرار إضافية -->
-    <div class="contact-repeat">
-      <h2>📲 اضغط وتواصل فوراً</h2>
-      <p style="font-size: 1.3rem; margin-bottom: 1.2rem;">نرد خلال ٣ دقائق</p>
-      <div class="btns-small">
-        <a href="https://wa.me/1234567890?text=مرحباً!%20شفت%20إعلانكم%20عالتيك%20توك%20وبغى%20احجز%20تنظيف" 
-           class="btn btn-wa btn-small" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <i class="fa-brands fa-whatsapp"></i> واتساب
-        </a>
-        <a href="tel:+1234567890" class="btn btn-call btn-small">
-          <i class="fa-solid fa-phone"></i> اتصال سريع
-        </a>
-      </div>
-      <div style="margin-top: 2rem;">
-        <a href="#" class="btn-outline btn-small" style="border-radius: 50px;" id="copyTelExample">
-          <i class="fa-regular fa-copy"></i> اضغط لنسخ الرقم
-        </a>
-      </div>
-    </div>
-
-    <!-- التذييل مع رقم الهاتف والبريد -->
-    <div class="footer">
-      <div class="phone-footer">
-        <i class="fa-solid fa-phone-volume"></i> <a href="tel:+1234567890">+١ (٢٣٤) ٥٦٧-٨٩٠</a>
-      </div>
-      <div style="margin: 0.8rem 0;">
-        <i class="fa-regular fa-envelope"></i> <a href="mailto:hello@ingazclean.pro">hello@ingazclean.pro</a>
-      </div>
-      <div style="display: flex; gap: 1.8rem; justify-content: center; margin: 1.5rem 0;">
-        <span><i class="fa-brands fa-tiktok"></i> @ingazclean</span>
-        <span><i class="fa-brands fa-instagram"></i> ingaz_pro</span>
-      </div>
-      <div style="font-size: 1rem;">
-        © <span id="currentYear"></span> إنجاز كلين — ترخيص وتأمين
-      </div>
-      <div class="click-log" id="clickMessage" style="margin-top: 1.2rem;"></div>
-    </div>
-  </div>
-
-  <!-- جافاسكربت: السنة الحالية + تسجيل النقرات + نسخ الرقم -->
-  <script>
-    (function() {
-      // تعيين السنة الحالية في التذييل
-      document.getElementById('currentYear').innerText = new Date().getFullYear();
-
-      const waBtns = document.querySelectorAll('.btn-wa');
-      const callBtns = document.querySelectorAll('.btn-call');
-      const msgDiv = document.getElementById('clickMessage');
-
-      function showClickMessage(platform) {
-        if (msgDiv) {
-          msgDiv.innerHTML = `<i class="fa-regular fa-hand-pointer"></i> تم النقر على ${platform} – سيتم فتح التطبيق...`;
-          setTimeout(() => {
-            msgDiv.innerHTML = '';
-          }, 3000);
-        }
-        console.log(`[إنجاز كلين] زر ${platform} نقر (${new Date().toLocaleTimeString('ar-EG')})`);
-      }
-
-      waBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          showClickMessage('واتساب');
-        });
-      });
-
-      callBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          showClickMessage('اتصال');
-        });
-      });
-
-      // زر نسخ الرقم
-      const copyBtn = document.getElementById('copyTelExample');
-      if (copyBtn) {
-        copyBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          navigator.clipboard.writeText('+1234567890').then(() => {
-            alert('📞 تم نسخ الرقم: +١ ٢٣٤ ٥٦٧ ٨٩٠');
-            showClickMessage('نسخ الرقم');
-          }).catch(() => {
-            prompt('انسخ الرقم يدوياً:', '+1234567890');
-          });
-        });
-      }
-
-      // لمسة تفاعلية: النقر المزدوج على الأيقونة
-      const heroIcon = document.querySelector('.hero-icon');
-      if (heroIcon) {
-        heroIcon.addEventListener('dblclick', function() {
-          const icon = this.querySelector('i');
-          if (icon) {
-            icon.className = 'fa-solid fa-broom';
-            setTimeout(() => {
-              icon.className = 'fa-solid fa-spray-can-sparkles';
-            }, 700);
-          }
-        });
-      }
-    })();
-  </script>
-
-  <!-- ملاحظة: جميع الأرقام وروابط واتساب هي أمثلة، يُرجى استبدالها ببيانات الشركة الحقيقية -->
-</body>
+  <script src="main.js"></script>
+    <!-- ملاحظة: جميع الأرقام وروابط واتساب هي أمثلة، يُرجى استبدالها ببيانات الشركة الحقيقية -->
+  </body>
 </html>
